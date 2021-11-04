@@ -7,3 +7,4 @@ Bài tập git - hi there
 hello bro
 how are you today?
 ok em
+ok xong roi
