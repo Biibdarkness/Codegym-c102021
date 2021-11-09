@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Form</title>
+</head>
+
+<body>
+    <form action="http://demo.codegym.vn/6/registration_form/register.php" method="get"></form>
+    <table style="background-color: paleturquoise; outline: 15px solid green;">
+        <caption style="background-color: orangered;">SỞ THÍCH CỦA BẠN</caption>
+        <tr>
+            <td style="color: blue;">Họ và tên</td>
+            <td><input type="text" name="yourname"></td>
+
+        </tr>
+        <tr>
+            <td style="color: blue;">Email</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">Sở thích</td>
+            <td>
+                <table>
+                    <tr style="color: orangered;">
+                        <Td><input type="checkbox" name="hobby">Thể thao</Td>
+                        <Td><input type="checkbox" name="hobby">Âm nhạc</Td>
+                        <Td><input type="checkbox" name="hobby">Đọc sách</Td>
+                    <tr style="color: orangered;">
+
+                        <Td><input type="checkbox" name="sở thích">Lướt web</Td>
+                        <Td><input type="checkbox" name="sở thích">Chơi game</Td>
+                        <Td><input type="checkbox" name="sở thích">Điện ảnh</Td>
+                    </tr>
+                    <tr style="color: orangered;">
+
+                        <Td><input type="checkbox" name="sở thích">Du lịch</Td>
+                    </tr>
+
+                    <tr>
+
+
+                        <td><input type="submit" name="Submit Form" id="send" value="Gửi thông tin"></td>
+                        <td><input type="reset" name="Reset Form" value="Nhập lại"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table>
+        <tr>ĐĂNG KÝ HỌC VIÊN</tr>
+        <TR>
+            <td>Họ và tên</td>
+            <td><input type="text" name="yourname"></td>
+        </TR>
+        <tr>
+            <td>Ngày sinh</td>
+            <td><input type="text" name="date of bird"></td>
+        </tr>
+        <tr>
+            <td>Giới tính</td>
+            <td> <input type="radio">Nam
+                <input type="radio">Nữ
+            </td>
+        </tr>
+        <tr>
+            <td>Địa chỉ</td>
+            <td><textarea name="địa chỉ" cols="20" rows="3"></textarea></td>
+        </tr>
+        <tr>
+            <td>Lớp</td>
+            <td><select>
+                    <option value="">Chọn lớp</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email"></td>
+        </tr>
+        <tr>
+            <td>Điện thoại</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Đăng ký">
+                <input type="reset" value="Nhập lại">
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
