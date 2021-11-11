@@ -30,20 +30,20 @@
             <td><button onclick="nut()"> Convert</button></td>
         </tr>
         <tr>
-            <td id="Result: "> </td>
+            <td id="Result: "> Result: </td>
         </tr>
     </table>
     <script>
         function nut() {
-            let giatrivao = document.getElementById('dauvao').value
-            let select1 = document.getElementById('select1').value
-            let select2 = document.getElementById('select2').value
+            let giatrivao = document.getElementbyId('dauvao').value
+            let select1 = document.getElementbyId('select1').value
+            let select2 = document.getElementbyId('select2').value
             if (select1 == select2) {
-                document.getElementById('Result').innerHTML='Result: ' + giatrivao ;
+                document.getElementbyId('Result: ').innerHTML='Result: ' + giatrivao ;
             }       else if (select1 == 'VietNam' && select2 == "USA")
-            document.getElementById('Result: ').innerHTML= 'Result: ' + giatrivao/24000 ;
+            document.getElementbyId('Result: ').innerHTML= 'Result: ' + giatrivao/24000 ;
             else 
-            document.getElementById('Result: ').innerHTML= 'Result: ' + giatrivao*24000 ;
+            document.getElementbyId('Result: ').innerHTML= 'Result: ' + giatrivao*24000 ;
             
             
            
