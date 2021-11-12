@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <h1>Calculator</h1>
     <input type="number" id="a">
     <input type="number" id="b">
@@ -20,25 +21,31 @@
     <hr>
     <p id="R">Result: </p>
     <script>
+
         function nut(type) {
-            a1 = Number(document.getElementbyId('a').value);
-            a2 = Number(document.getElementbyId('b').value);
+            a1 = Number(document.getElementById('a').value);
+            a2 = Number(document.getElementById('b').value);
             switch (type) {
                 case 1: {
-                    document.getElementbyId('R').innerHTML = 'Result: ' + (a1 + a2);
+                    document.getElementById('R').innerHTML = 'Result: ' + (a1 + a2);
                     break;
                 }
                 case 2: {
-                    document.getElementbyId('R').innerHTML = 'Result: ' + (a1 - a2);
+                    document.getElementById('R').innerHTML = 'Result: ' + (a1*100000 - a2*100000)/100000.;
                     break;
                 }
                 case 3: {
-                    document.getElementbyId('R').innerHTML = 'Result: ' + (a1 * a2);
+                    document.getElementById('R').innerHTML = 'Result: ' + (a1 * a2);
                     break;
                 }
                 case 4: {
-                    document.getElementbyId('R').innerHTML = 'Result: ' + (a1 / a2);
-                    break;
+                    if (a2 != 0) {
+                        document.getElementById('R').innerHTML = 'Result: ' + (a1 / a2);
+                        break;
+                    } else {
+                        document.getElementById('R').textContent = 'Result: Không thể chia';
+                    }
+
                 }
             }
         }
