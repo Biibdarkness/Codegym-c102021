@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+
+<body>
+    <script>
+        var n = +prompt("nhập cân nặng (ví dụ: 50)");
+        var c = +prompt("nhập chiều cao: (ví dụ: 1.60)");
+        bmi = n / (c * c);
+        if (bmi < 18) {
+            document.write("Underweight" + "<br/>");
+        } else if (bmi < 25.0) {
+            document.write("Normal" + "<br/>");
+        } else if (bmi < 30.0) {
+            document.write("Overweight" + "<br/>");
+        } else {
+            document.write("Obeser" + "<br/>");
+        }
+
+        document.write(bmi);
+    </script>
+</body>
+
+</html>
