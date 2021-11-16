@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng cứu chương</title>
+    <!-- <script>
+        let table = "<table border=1>";
+            for (let j=1 ; j<=10 ; j++){
+                table += "<tr>";
+                    for (let i =2; i<=9; i++){
+                        table += `<td style='text-align:right;'> ${i} X ${j} = ${i*j} </td>`;
+                        // table = table + "<td style='text-align:right;'>" + i + " x " + j + " = " + (i*j) + "</td>";
+                    }
+                    table += "</tr>"
+            }
+            table += "</table>"
+            document.write(table);
+    </script> -->
+   
+
+    </table>
+    <script>
+        let table = "<table border=1 style=border-collapse:collapse>";
+        for (let j = 1; j <= 10; j++) {
+            table += "<tr>";
+            let i = 2;
+            do {
+                table += `<td style='text-align:right;'> ${i} X ${j} = ${i * j} </td>`;
+                // table = table + "<td style='text-align:right;'>" + i + " x " + j + " = " + (i*j) + "</td>";
+                i++;
+            }
+            while (i <= 9);
+            table += "</tr>"
+        }
+        table += "</table>"
+        document.write(table);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
