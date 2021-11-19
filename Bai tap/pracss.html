@@ -1,0 +1,142 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập</title>
+</head>
+
+<body>
+    
+    <table border="1">
+        <caption>
+            <div id="rgbaresult" style="background-color: rgba(255, 0, 0, 1); line-height: 100px;">
+                <p id="rgbaresulttext" style="color: rgb(255, 0, 0, 1);">
+                    </p>
+            </div>
+        </caption>
+        <tr>
+            <td style="text-align: center;">RED</td>
+            <td style="text-align: center;">GREEN</td>
+            <td style="text-align: center;">BLUE</td>
+            <td style="text-align: center;">ALPHA</td>
+        </tr>
+        <tr>
+            <td><input type="range" id="red" onchange="changeRGBA()" oninput="changeRGBA()" value="255" min="0"
+                    max="255"></td>
+            <td><input type="range" id="green" onchange="changeRGBA()" oninput="changeRGBA()" value="0" min="0"
+                    max="255"></td>
+            <td><input type="range" id="blue" onchange="changeRGBA()" oninput="changeRGBA()" value="0" min="0"
+                    max="255"></td>
+            <td><input type="range" id="alpha" onchange="changeRGBA()" oninput="changeRGBA()" value="10" min="0"
+                    max="10"></td>
+        </tr>
+        <tr>
+            <td id="vr" style="text-align: center;">225</td>
+            <td id="vg" style="text-align: center;">225</td>
+            <td id="vb" style="text-align: center;">225</td>
+            <td id="va" style="text-align: center;">1</td>
+        </tr>
+    </table>
+    <script>
+        changeRGBA();
+        function changeRGBA() {
+            var col, r, g, b, a;
+            r = document.getElementById("red").value;
+            g = document.getElementById("green").value;
+            b = document.getElementById("blue").value;
+            a = document.getElementById("alpha").value / 10;
+            col = ("RGBA(" + r + "," + g + "," + b + "," + a + ")");
+            document.getElementById('vr').innerHTML = r;
+            document.getElementById('vg').innerHTML = g;
+            document.getElementById('vb').innerHTML = b;
+            document.getElementById('va').innerHTML = a;
+            document.getElementById('rgbaresult').style.backgroundColor = col;
+            loc = ("RGBA(" + b + "," + r + "," + g + "," + a + ")") ;
+            document.getElementById('rgbaresulttext').innerHTML = col;
+           
+        }
+
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <caption>
+            <div id='colorPreview' style="background-color: rgb(37, 3, 3); line-height: 100px">
+                <p id="rgbaText"
+                    style="font-size: 120%;font-weight: bold; font-family: 'Courier New', Courier, monospace;color: rgb(26, 58, 153);">
+                </p>
+            </div>
+
+        </caption>
+        <tr>
+            <td>RED</td>
+            <td>GREEN</td>
+            <td>BLUE</td>
+            <td>ALPHA</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="range" id="slideR" onchange="changeRGBA()" oninput="changeRGBA()" min="0" max="255"
+                    value="255">
+            </td>
+            <td>
+                <input type="range" id="slideG" onchange="changeRGBA()" oninput="changeRGBA()" min="0" max="255"
+                    value="0">
+            </td>
+            <td>
+                <input type="range" id="slideB" onchange="changeRGBA()" oninput="changeRGBA()" min="0" max="255"
+                    value="0">
+            </td>
+            <td>
+                <input type="range" id="slideA" onchange="changeRGBA()" oninput="changeRGBA()" min="0" max="1" value="1"
+                    step='0.1'>
+            </td>
+        </tr>
+        <tr>
+            <td id="vR">255</td>
+            <td id="vG">0</td>
+            <td id="vB">0</td>
+            <td id="vA">1</td>
+        </tr>
+
+    </table>
+    <script>
+        changeRGBA();
+        function changeRGBA() {
+            var red, green, blue, alpha, col;
+            red = document.getElementById('slideR').value;
+            green = document.getElementById('slideG').value;
+            blue = document.getElementById('slideB').value;
+            alpha = document.getElementById('slideA').value;
+            col = ("rgb(" + red + "," + green + "," + blue + "," + alpha + ")");
+            document.getElementById('vR').innerHTML = red;
+            document.getElementById('vG').innerHTML = green;
+            document.getElementById('vB').innerHTML = blue;
+            document.getElementById('vA').innerHTML = alpha;
+            document.getElementById('colorPreview').style.backgroundColor = col;
+            document.getElementById('rgbaText').innerHTML = col;
+            if (col < 150 && a > 0.2) {
+                document.getElementById('rgbaText').style.color = "#rgba(255,255,255,1)";
+            } else {
+                document.getElementById('rgbaText').style.color = "#rgba(0,0,0,1)";
+            }
+        }
+    </script>
+</body>
+
+</html>

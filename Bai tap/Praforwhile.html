@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice For/While</title>
+</head>
+
+<body>
+    <script>
+        let numbers = +prompt("Nhập 1 số bất kì: ");
+        let count = 0;
+        let n = 2;
+        let soNguyenTo = true;
+        while (count <= numbers) {
+            soNguyenTo = true;
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    soNguyenTo = false;
+                    break;
+                }
+            }
+            if (soNguyenTo) {
+                document.write(`${n}, `);
+                count++;
+            }
+            n++;
+        }
+
+    </script>
+</body>
+
+</html>
