@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 3</title>
+</head>
+
+<body>
+    <script>
+        let arr = prompt("Nhập chuỗi");
+        if (arr.length > 0) {
+            let upper = arr.toUpperCase();
+            let change = Array.from(upper);
+            let result = lettersAreVowels(change);
+            if (result) {
+                document.write(`Số ký tự nguyên âm trong câu là: ${result[0]}`);
+            } else {
+                document.write(`Không có nguyên âm trong câu`);
+            }
+        } else {
+            document.write(`Nhập lại chuỗi`);
+        }
+        function lettersAreVowels(a) {
+            let count = 0,
+                result = [];
+            a.forEach(function (word, index) {
+                if (word === 'A' || word === 'O' || word === 'E' || word === 'U' || word === 'I' 
+                 || word === 'Á'|| word === 'Ó'|| word === 'É'|| word === 'Ú'|| word === 'Í'
+                 || word === 'À'|| word === 'Ò'|| word === 'È'|| word === 'Ù'|| word === 'Ì'
+                 || word === 'Ạ'|| word === 'Ọ'|| word === 'Ẹ'|| word === 'Ụ'|| word === 'Ị'
+                 || word === 'Ả'|| word === 'Ỏ'|| word === 'Ẻ'|| word === 'Ủ'|| word === 'Ỉ'
+                 || word === 'Ã'|| word === 'Õ'|| word === 'Ẽ'|| word === 'Ũ'|| word === 'Ĩ'
+                 || word === 'Ấ'|| word === 'Ầ'|| word === 'Ẫ'|| word === 'Ẩ'|| word === 'Ậ'
+                 || word === 'Ắ'|| word === 'Ằ'|| word === 'Ẵ'|| word === 'Ẳ'|| word === 'Ặ'
+                 || word === 'Ố'|| word === 'Ồ'|| word === 'Ỗ'|| word === 'Ổ'|| word === 'Ộ'
+                 || word === 'Ế'|| word === 'Ề'|| word === 'Ễ'|| word === 'Ể'|| word === 'Ệ'
+                 || word === 'Ớ'|| word === 'Ờ'|| word === 'Ỡ'|| word === 'Ở'|| word === 'Ợ') {
+                    a[index] = word;
+                    count++;
+                }
+            });
+            result.push(count);
+            result.push(a.join(""));
+            return (count > 0) ? result : false;
+        }
+    </script>
+
+</body>
+
+</html>

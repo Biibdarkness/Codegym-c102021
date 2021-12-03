@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 2</title>
+</head>
+
+<body>
+    <script>
+        function timvitriphantu() {
+            let number = prompt("Nhập một số bất kì: ");
+            let arr = [-2, 4, 1, 5, 2, 12];
+            let isExist = false;
+            for (let i = 0; i < arr.length; i++) {
+                if (number == arr[i]) {
+                    alert(`Giá trị ${arr[i]} xuất hiện tại vị trí thứ ${i + 1} trong mảng`);
+                    isExist = true;
+                    break;
+                }
+            }
+            if (!isExist) {
+                alert("Không có giá trị vừa nhập trong mảng");
+            }
+        }
+        timvitriphantu();
+    </script>
+</body>
+
+</html>

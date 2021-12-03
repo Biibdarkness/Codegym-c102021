@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 1</title>
+</head>
+
+<body>
+    <script>
+        function giaiptbacnhat() {
+            var a;
+            var b;
+            a = prompt(`Nhập hệ số a: `);
+            b = prompt(`Nhập hệ số b: `);
+            if (a == 0) {
+                if (b == 0) {
+                    document.write(`x có vô số nghiệm`);
+                }
+                else {
+                    document.write(`x vô nghiệm`);
+                }
+            }
+            else {
+                document.write(`Ta có :${a}x + ${b} = 0   <br>=>  x = -${b} : ${a} <br>=> x = ` + (-b / a));
+            }
+        }
+        giaiptbacnhat();
+    </script>
+</body>
+
+</html>
