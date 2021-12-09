@@ -1,5 +1,6 @@
 
-function play(size) {
+const size = 5;
+function buildData() {
     let matrix = [];
     for (i = 0; i < size; i++) {
         matrix[i] = [];
@@ -9,5 +10,9 @@ function play(size) {
         }
     }  return matrix;
 }
-test = play(5);
-console.log(test);
+
+function drawtictactoe(matrix){
+let size = matrix.length;
+let tbtictactoe = "<table>";
+for ()
+}
