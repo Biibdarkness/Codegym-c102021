@@ -1,0 +1,18 @@
+.col1 {
+color: brown;
+}
+.test{
+    left: 25%;
+    /* width: 50%; */
+    height: 100px;
+    /* position: fixed; */
+}
+.test1{
+    width: 50%;
+    height: 100px;
+    position: absolute;
+}
+.testrow{
+    width: 100%;
+    float: left;
+}
